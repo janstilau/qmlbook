@@ -34,8 +34,6 @@ Rectangle {
 
     color: '#333333'
 
-
-
     // M1>>
     Image {
         x: 12; y: 12

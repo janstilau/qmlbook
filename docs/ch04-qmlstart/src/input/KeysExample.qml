@@ -37,7 +37,9 @@ DarkSquare {
         id: square
         x: 8; y: 8
     }
+
     focus: true
+
     Keys.onLeftPressed: square.x -= 8
     Keys.onRightPressed: square.x += 8
     Keys.onUpPressed: square.y -= 8

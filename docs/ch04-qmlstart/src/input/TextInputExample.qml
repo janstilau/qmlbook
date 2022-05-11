@@ -36,6 +36,12 @@ Rectangle {
     color: "linen"
 
     TextInput {
+        Rectangle {
+            color: "red"
+            anchors.fill: input1
+            opacity: 0.3
+        }
+
         id: input1
         x: 8; y: 8
         width: 96; height: 20

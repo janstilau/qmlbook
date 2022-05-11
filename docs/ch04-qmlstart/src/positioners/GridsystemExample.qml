@@ -36,8 +36,9 @@ BrightSquare {
 
     DarkSquare {
         id: container
-        width: 800
-        height: 480
+        width: 1200
+        height: 800
+
         property int marginTop: 16
         property int marginRight: 32
         property int marginBottom: marginTop

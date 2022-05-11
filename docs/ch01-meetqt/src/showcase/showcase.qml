@@ -28,7 +28,6 @@
 // showcase.qml
 
 import QtQuick 2.5
-import QtGraphicalEffects 1.0
 
 Image {
     id: root
@@ -43,7 +42,6 @@ Image {
         source: "images/pole.png"
     }
 
-
     Image {
         id: wheel
         anchors.centerIn: parent
@@ -53,19 +51,11 @@ Image {
                 duration: 250
             }
         }
-        layer.effect: FastBlur {
-            id: blur
-            radius: root.blurRadius
-            Behavior on radius {
-                NumberAnimation {
-                    duration: 250
-                }
-            }
-        }
         layer.enabled: true
     }
 
     MouseArea {
+        id: clickMouse
         anchors.fill: parent
         onPressed: {
             wheel.rotation += 90
@@ -73,6 +63,15 @@ Image {
         }
         onReleased: {
             root.blurRadius = 0
+        }
+    }
+
+    // 在 Mouse 里面, 填写 OnPress, 可以认为是赋值给 MouseArea 对象, 它的 Signal 的处理函数
+    // 在 Connections 里面, 通过 id 进行信号的链接, 可以认为是 connect 的主动调用, attach 额外的信号处理函数, 到 MouseArea 的信号发射回调里面.
+    Connections {
+        target: clickMouse
+        function onPressed() {
+            console.log("MouseDidClicked")
         }
     }
 }

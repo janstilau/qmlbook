@@ -32,6 +32,7 @@ import QtQuick 2.5
 Column {
     width: 240
     height: 120
+    // 只有, 明确的写明, Height 和 parent 的进行 bind, 才能实现跟随的效果.
     GreenSquare {
         height: parent.height*0.2; width: parent.width
     }

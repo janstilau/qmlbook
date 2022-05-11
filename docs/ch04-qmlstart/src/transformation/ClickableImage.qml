@@ -32,12 +32,14 @@
 
 import QtQuick 2.5
 
+// 在 QML 里面, 也是自定义信号, 然后在使用的时候, 给 onClicked 这个属性进行赋值.
 Image {
     id: root
     signal clicked
 
     MouseArea {
         anchors.fill: parent
+        // 这里和在 C++ 环境触发信号是一样的, 所谓的信号函数, 其实就是一个函数. 只不过, 这个函数, 可以是监听者模式的头.
         onClicked: root.clicked()
     }
 }

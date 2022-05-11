@@ -60,6 +60,5 @@ Image {
         anchors.fill: parent
         onClicked: root.running = true
     }
-
 }
 // <<M1

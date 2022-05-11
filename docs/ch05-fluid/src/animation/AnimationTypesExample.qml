@@ -54,6 +54,7 @@ Item {
         x: 40; y: root.height-height
         source: "assets/box_green.png"
         text: "animation on property"
+        // 当, 没有设置 Running 的时候, 加载完成就会触发动画.
         NumberAnimation on y {
             to: 40; duration: 4000
         }

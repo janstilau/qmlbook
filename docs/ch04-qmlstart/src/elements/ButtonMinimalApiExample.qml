@@ -48,6 +48,7 @@ Item {
         anchors.centerIn: parent
         text: "Start"
     }
+
     MouseArea {
         anchors.fill: parent
         onClicked: {

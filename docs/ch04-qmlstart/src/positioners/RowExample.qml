@@ -34,6 +34,12 @@ BrightSquare {
     id: root
     width: 400; height: 120
 
+    Rectangle {
+        color: "green"
+        anchors.fill: row
+        opacity: 0.5
+    }
+
     Row {
         id: row
         anchors.centerIn: parent
